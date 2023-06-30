@@ -125,6 +125,9 @@ end
 
 --Disconnect MoveToFinished connection when pathfinding ends
 local function disconnectMoveConnection(self)
+	if not self._moveConnection then
+		return
+	end
 	self._moveConnection:Disconnect()
 	self._moveConnection = nil
 end
