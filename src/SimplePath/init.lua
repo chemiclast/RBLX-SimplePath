@@ -22,7 +22,7 @@ local DEFAULT_SETTINGS = {
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 
-local Signal = require(script.Signal)
+local Signal = require(script.Signal).Signal
 
 local function output(func, msg)
 	func((if func == error then "SimplePath Error: " else "SimplePath: ") .. msg)
